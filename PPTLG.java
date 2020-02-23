@@ -20,7 +20,7 @@ public class PPT {
         int idioma = lector.nextInt();
 
         switch (idioma) 
-        {                //Aqui posam els idiomes
+        {                //Aqui posam els idiomes sdasdasjsa`sasjdsdjisjjasdjiaijwjoiwadjodiawawdjiowwjio
             case 1:
                 Catala();
                 break;
