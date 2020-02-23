@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class PPT {
-    static final int pedra = 1, paper = 2, tisores = 3;
+    static final int pedra = 1, paper = 2, tisores = 3, lagarto = 4, spock=5;
     static int pu = 0, pm = 0;
     static Scanner lector = new Scanner(System.in);
     static int maquina = 0, usuario = 0;
@@ -20,7 +20,7 @@ public class PPT {
         int idioma = lector.nextInt();
 
         switch (idioma) 
-        {                //Aqui posam els idiomes sdasdasjsa`sasjdsdjisjjasdjiaijwjoiwadjodiawawdjiowwjio
+        {                //Aqui posam els idiomes
             case 1:
                 Catala();
                 break;
@@ -48,9 +48,11 @@ public class PPT {
             System.out.println("Tria una opcio");
             System.out.println(" ");
             System.out.println("--------------");
-            System.out.println("| 1- Pedra   |");
-            System.out.println("| 2- Paper   |");
-            System.out.println("| 3- Tisores |");
+            System.out.println("| 1- Pedra      |");
+            System.out.println("| 2- Paper      |");
+            System.out.println("| 3- Tisores    |");
+            System.out.println("| 4- Llangardaix|");
+            System.out.println("| 5- Spok       |");
             System.out.println("--------------");
             System.out.println(" ");
 
@@ -77,6 +79,20 @@ public class PPT {
                         System.out.println("-Puntua l'usuari-");
                         pu++;
                     }
+                     else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-La maquina puntua-");
+                        pm++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua l'usuari-");
+                        pu++;
+                    } 
                     else   //Si el usuari treu les tissores, la màquina guanya.
                     {
                         System.out.println("-La maquina puntua-");
@@ -99,6 +115,20 @@ public class PPT {
                         {
                             System.out.println("-Heu empatat-");
                         } 
+                         else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
                         else 
                         {
                             System.out.println("-Puntua l'usuari-");
@@ -108,6 +138,8 @@ public class PPT {
                 } 
                 else 
                 { //Tisores
+                  if (maquina == tisores) //si sa maquina treu paper i usuari pedra, la maquina guanya.
+                  {
                     if (usuario == pedra) //si el usuari treu pedra, guanya s'usuari
                     {
                         System.out.println("-Puntua l'usuari-");
@@ -121,11 +153,97 @@ public class PPT {
                             pm++;
                         } 
                         else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                        else 
                         {
                             System.out.println("-Heu empatat-");
                         }
                     }
                 }
+                else 
+            {
+                if (maquina == lagarto) 
+                {
+                    if (usuario == pedra) 
+                    {
+                        System.out.println("-Puntua l'usuario-");
+                        pu++;
+                    } 
+                    else 
+                    {
+                        if (usuario == paper) 
+                        {
+                            System.out.println("-Puntua la maquina-");
+                            pm++
+                        } 
+                          else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Habeis empatado-");
+                       
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                        else 
+                        {
+                            System.out.println("-Puntua el usuario-");
+                            pu++;
+                        }
+                    }
+                }
+                 else 
+            {
+                if (maquina == spock) 
+                {
+                    if (usuario == pedra) 
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                    else 
+                    {
+                        if (usuario == paper) 
+                        {
+                            System.out.println("-Puntua la maquina-");
+                        } 
+                          else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Habeis empatado-");
+                      
+                    } 
+                        else 
+                        {
+                            System.out.println("-Puntua la maquina-");
+                            pm++;
+                        }
+
             }
         }
 
@@ -168,6 +286,8 @@ public class PPT {
             System.out.println("| 1- Piedra  |");
             System.out.println("| 2- Papel   |");
             System.out.println("| 3- Tijeras |");
+            System.out.println("| 4- Lagarto |");
+            System.out.println("| 5- Spok    |");
             System.out.println("--------------");
             System.out.println(" ");
 
@@ -195,6 +315,20 @@ public class PPT {
                         pu++;
                     } 
                     else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                    else 
                     {
                         System.out.println("-Puntua la maquina-");
                         pm++;
@@ -216,6 +350,20 @@ public class PPT {
                         {
                             System.out.println("-Habeis empatado la ronda-");
                         } 
+                          else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
                         else 
                         {
                             System.out.println("-Puntua el usuario-");
@@ -225,6 +373,8 @@ public class PPT {
                 }
                 else 
                 { //Tisores
+                    if (maquina == tisores)
+                    {   
                     if (usuario == pedra) 
                     {
                         System.out.println("-Puntua el usuario-");
@@ -238,8 +388,95 @@ public class PPT {
                             pm++;
                         } 
                         else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                        else 
                         {
                             System.out.println("-Habeis empatado la ronda-");
+                        }
+                    }
+                }
+           else 
+                {
+                if (maquina == lagarto) 
+                {
+                    if (usuario == pedra) 
+                    {
+                        System.out.println("-Puntua l'usuario-");
+                        pu++;
+                    } 
+                    else 
+                    {
+                        if (usuario == paper) 
+                        {
+                            System.out.println("-Puntua la maquina-");
+                            pm++
+                        } 
+                          else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Habeis empatado-");
+                       
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                        else 
+                        {
+                            System.out.println("-Puntua el usuario-");
+                            pu++;
+                        }
+                    }
+                }
+            else 
+                {
+                if (maquina == spock) 
+                {
+                    if (usuario == pedra) 
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                    else 
+                    {
+                        if (usuario == paper) 
+                        {
+                            System.out.println("-Puntua la maquina-");
+                        } 
+                          else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Habeis empatado-");
+                      
+                    } 
+                        else 
+                        {
+                            System.out.println("-Puntua la maquina-");
+                            pm++;
                         }
                     }
                 }
@@ -290,7 +527,7 @@ public class PPT {
 
             usuario = lector.nextInt();
             Random r = new Random();
-            maquina = r.nextInt(3) + 1; //Random entre 1 i 3
+            maquina = r.nextInt(5) + 1; //Random entre 1 i 3
             System.out.println(" ");
             System.out.println("--------------------------------");
             System.out.println("* Value of the computer: " + maquina);
@@ -307,6 +544,20 @@ public class PPT {
                 else 
                 {
                     if (usuario == paper) {
+                        System.out.println("-The user takes points-");
+                        pu++;
+                    } 
+                     else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-The bot takes points-");
+                        pm++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
                         System.out.println("-The user takes points-");
                         pu++;
                     } 
@@ -331,6 +582,20 @@ public class PPT {
                         if (usuario == paper) {
                             System.out.println("-The round has been tied-");
                         } 
+                          else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
                         else 
                         {
                             System.out.println("-The user takes points-");
@@ -340,6 +605,8 @@ public class PPT {
                 } 
                 else 
                 { //Tisores
+                   if (maquina == tisores)
+                   {
                     if (usuario == pedra) 
                     {
                         System.out.println("-The user takes points-");
@@ -353,11 +620,96 @@ public class PPT {
                             pm++;
                         } 
                         else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                        else 
                         {
                             System.out.println("-The round has been tied-");
                         }
                     }
                 }
+                else 
+            {
+                if (maquina == lagarto) 
+                {
+                    if (usuario == pedra) 
+                    {
+                        System.out.println("-Puntua l'usuario-");
+                        pu++;
+                    } 
+                    else 
+                    {
+                        if (usuario == paper) 
+                        {
+                            System.out.println("-Puntua la maquina-");
+                            pm++
+                        } 
+                          else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Habeis empatado-");
+                       
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                        else 
+                        {
+                            System.out.println("-Puntua el usuario-");
+                            pu++;
+                        }
+                    }
+                }
+                 else 
+            {
+                if (maquina == spock) 
+                {
+                    if (usuario == pedra) 
+                    {
+                        System.out.println("-Puntua la maquina-");
+                        pm++;
+                    } 
+                    else 
+                    {
+                        if (usuario == paper) 
+                        {
+                            System.out.println("-Puntua la maquina-");
+                        } 
+                          else 
+                {
+                    if (usuario == lagarto)
+                    {
+                        System.out.println("-Puntua el usuario-");
+                        pu++;
+                    } 
+                    else 
+                {
+                    if (usuario == spock) 
+                    {
+                        System.out.println("-Habeis empatado-");
+                      
+                    } 
+                        else 
+                        {
+                            System.out.println("-Puntua la maquina-");
+                            pm++;
+                        }
             }
         }
         
